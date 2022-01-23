@@ -27,6 +27,7 @@ export default {
     notFound: 'No Data Found',
   },
   more: {
+    title: 'Application Information',
     darkMode: 'Dark Mode',
     auto: 'Auto',
     dark: 'Dark',
@@ -43,7 +44,7 @@ export default {
   },
   currency: {
     billion: 'Billion',
-    milion: 'Milion',
+    milion: 'Million',
     thousand: 'Thousand',
   },
 }

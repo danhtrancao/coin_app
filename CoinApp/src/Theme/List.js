@@ -64,7 +64,7 @@ export default function List() {
     },
     textStyle: {
       textAlign: 'center',
-      color: 'white',
+      color: 'black',
       fontSize: 14,
       padding: 7,
     },
@@ -74,7 +74,13 @@ export default function List() {
     },
     backgroundHeader: {
       flexDirection: 'column',
-      backgroundColor: '#1D2225',
+      backgroundColor: 'lightgrey',
+    },
+    paddingBottom: {
+      paddingBottom: 40,
+    },
+    paddingBottomMore: {
+      paddingBottom: 50,
     },
   })
 }

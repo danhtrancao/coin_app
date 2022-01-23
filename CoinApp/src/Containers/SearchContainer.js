@@ -110,7 +110,7 @@ const SearchContainer = ({ navigation }) => {
               ItemSeparatorComponent={ItemSeparator}
               renderItem={ItemSearchView}
               ListEmptyComponent={EmptyList}
-              contentContainerStyle={{ paddingBottom: 40 }}
+              contentContainerStyle={List.paddingBottom}
             />
           </View>
         )}
@@ -125,7 +125,7 @@ const SearchContainer = ({ navigation }) => {
               ItemSeparatorComponent={ItemSeparator}
               renderItem={ItemTrendingView}
               ListEmptyComponent={EmptyList}
-              contentContainerStyle={{ paddingBottom: 50 }}
+              contentContainerStyle={List.paddingBottomMore}
             />
           </View>
         )}
