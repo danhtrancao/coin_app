@@ -19,11 +19,13 @@ export default function List() {
       padding: 0,
       textAlign: 'center',
       fontSize: 12,
+      color: 'white',
     },
     itemStyle: {
       padding: 10,
       textAlign: 'center',
       fontSize: 14,
+      color: 'white',
     },
     itemIncreaseStyle: {
       padding: 10,
@@ -59,6 +61,20 @@ export default function List() {
       height: 0.5,
       width: '100%',
       backgroundColor: '#C8C8C8',
+    },
+    textStyle: {
+      textAlign: 'center',
+      color: 'white',
+      fontSize: 14,
+      padding: 7,
+    },
+    lineStyle: {
+      borderBottomColor: 'grey',
+      borderBottomWidth: 0.5,
+    },
+    backgroundHeader: {
+      flexDirection: 'column',
+      backgroundColor: '#1D2225',
     },
   })
 }

@@ -38,6 +38,7 @@ export default function ({ Colors, ...args }) {
       titleTextViewStyle: {
         flex: 8,
         fontSize: 25,
+        color: 'white',
         textAlign: 'center',
       },
       container: {

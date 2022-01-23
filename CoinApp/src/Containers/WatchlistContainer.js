@@ -9,6 +9,7 @@ import {
   convertStringToCurrencyDecimal,
 } from '@/Services/utils'
 import { t } from 'i18next'
+import LinearGradient from 'react-native-linear-gradient'
 
 const WatchlistContainer = ({ navigation }) => {
   const onNavigateSearchContainer = () => {
@@ -85,30 +86,35 @@ const WatchlistContainer = ({ navigation }) => {
   }
 
   return (
-    <View>
-      <View style={Common.titleViewStyle}>
-        <Text style={Common.titleTextViewStyle}>{t('watchlist')}</Text>
-        <TouchableOpacity
-          onPress={async () => await onNavigateSearchContainer()}
-        >
-          <Icon
-            style={Layout.twoFlex}
-            size={25}
-            name="search-outline"
-            color="#887700"
-          />
-        </TouchableOpacity>
-      </View>
-      <FlatList
-        data={items}
-        stickyHeaderIndices={[0]}
-        keyExtractor={(item, index) => index.toString()}
-        ItemSeparatorComponent={ItemSeparator}
-        ListHeaderComponent={ListHeader}
-        renderItem={ItemDetailView}
-        ListEmptyComponent={EmptyList}
-        contentContainerStyle={{ paddingBottom: 50 }}
-      />
+    <View style={Layout.container}>
+      <LinearGradient
+        colors={['#1d1e22', '#1e2829', '#213333']}
+        style={Layout.fill}
+      >
+        <View style={Common.titleViewStyle}>
+          <Text style={Common.titleTextViewStyle}>{t('watchlist')}</Text>
+          <TouchableOpacity
+            onPress={async () => await onNavigateSearchContainer()}
+          >
+            <Icon
+              style={Layout.twoFlex}
+              size={25}
+              name="search-outline"
+              color="#887700"
+            />
+          </TouchableOpacity>
+        </View>
+        <FlatList
+          data={items}
+          stickyHeaderIndices={[0]}
+          keyExtractor={(item, index) => index.toString()}
+          ItemSeparatorComponent={ItemSeparator}
+          ListHeaderComponent={ListHeader}
+          renderItem={ItemDetailView}
+          ListEmptyComponent={EmptyList}
+          contentContainerStyle={{ paddingBottom: 50 }}
+        />
+      </LinearGradient>
     </View>
   )
 }

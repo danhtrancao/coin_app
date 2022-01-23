@@ -6,7 +6,6 @@ import {
   Image,
   FlatList,
   ActivityIndicator,
-  SafeAreaView,
 } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 import { getMarketList } from '@/Services/api'
@@ -15,6 +14,7 @@ import {
   convertStringToCurrency,
   convertStringToCurrencyDecimal,
 } from '@/Services/utils'
+import LinearGradient from 'react-native-linear-gradient'
 import { t } from 'i18next'
 import { useTheme } from '@/Hooks'
 
@@ -125,37 +125,42 @@ const MarketContainer = ({ navigation }) => {
   }
 
   return (
-    <SafeAreaView>
-      <View style={Common.titleViewStyle}>
-        <Text style={Common.titleTextViewStyle}>{t('name')}</Text>
-        <TouchableOpacity
-          onPress={async () => await onNavigateSearchContainer()}
-        >
-          <Icon
-            style={Layout.twoFlex}
-            size={25}
-            name="search-outline"
-            color="#887700"
+    <View style={Layout.container}>
+      <LinearGradient
+        colors={['#1d1e22', '#1e2829', '#213333']}
+        style={Layout.fill}
+      >
+        <View style={Common.titleViewStyle}>
+          <Text style={Common.titleTextViewStyle}>{t('name')}</Text>
+          <TouchableOpacity
+            onPress={async () => await onNavigateSearchContainer()}
+          >
+            <Icon
+              style={Layout.twoFlex}
+              size={25}
+              name="search-outline"
+              color="#887700"
+            />
+          </TouchableOpacity>
+        </View>
+        {isLoading ? (
+          <ActivityIndicator />
+        ) : (
+          <FlatList
+            data={marketCoins}
+            stickyHeaderIndices={[0]}
+            keyExtractor={(item, index) => index.toString()}
+            ItemSeparatorComponent={ItemSeparator}
+            ListHeaderComponent={ListHeader}
+            renderItem={ItemDetailView}
+            ListEmptyComponent={EmptyList}
+            onRefresh={onRefresh}
+            refreshing={isRefreshing}
+            contentContainerStyle={{ paddingBottom: 50 }}
           />
-        </TouchableOpacity>
-      </View>
-      {isLoading ? (
-        <ActivityIndicator />
-      ) : (
-        <FlatList
-          data={marketCoins}
-          stickyHeaderIndices={[0]}
-          keyExtractor={(item, index) => index.toString()}
-          ItemSeparatorComponent={ItemSeparator}
-          ListHeaderComponent={ListHeader}
-          renderItem={ItemDetailView}
-          ListEmptyComponent={EmptyList}
-          onRefresh={onRefresh}
-          refreshing={isRefreshing}
-          contentContainerStyle={{ paddingBottom: 50 }}
-        />
-      )}
-    </SafeAreaView>
+        )}
+      </LinearGradient>
+    </View>
   )
 }
 
