@@ -9,6 +9,7 @@ import {
   Layout,
   themes,
   DefaultVariables,
+  List,
 } from '@/Theme'
 
 export default function () {
@@ -44,6 +45,7 @@ export default function () {
       Layout: Layout(themeVariables),
       Gutters: Gutters(themeVariables),
     }),
+    List: List(themeVariables),
     ...themeVariables,
   }
 

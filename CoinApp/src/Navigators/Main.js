@@ -6,43 +6,56 @@ import {
   SearchContainer,
   WatchlistContainer,
 } from '@/Containers'
+import Icon from 'react-native-vector-icons/Ionicons'
 
 const BottomTab = createBottomTabNavigator()
 
 // @refresh reset
 const MainNavigator = () => {
   return (
-    <BottomTab.Navigator>
+    <BottomTab.Navigator screenOptions={{ headerShown: false }}>
       <BottomTab.Screen
         name="Market"
         component={MarketContainer}
         options={{
-          tabBarIconStyle: { display: 'none' },
-          tabBarLabelPosition: 'beside-icon',
+          tabBarIconStyle: { display: 'flex' },
+          tabBarLabelPosition: 'below-icon',
+          tabBarIcon: ({ color, size }) => (
+            <Icon name="bar-chart-outline" color="#887700" />
+          ),
         }}
       />
       <BottomTab.Screen
         name="Watchlist"
         component={WatchlistContainer}
         options={{
-          tabBarIconStyle: { display: 'none' },
-          tabBarLabelPosition: 'beside-icon',
+          tabBarIconStyle: { display: 'flex' },
+          tabBarLabelPosition: 'below-icon',
+          tabBarIcon: ({ color, size }) => (
+            <Icon name="star-outline" color="#887700" />
+          ),
         }}
       />
       <BottomTab.Screen
         name="Search"
         component={SearchContainer}
         options={{
-          tabBarIconStyle: { display: 'none' },
-          tabBarLabelPosition: 'beside-icon',
+          tabBarIconStyle: { display: 'flex' },
+          tabBarLabelPosition: 'below-icon',
+          tabBarIcon: ({ color, size }) => (
+            <Icon name="search-outline" color="#887700" />
+          ),
         }}
       />
       <BottomTab.Screen
         name="More"
         component={MoreContainer}
         options={{
-          tabBarIconStyle: { display: 'none' },
-          tabBarLabelPosition: 'beside-icon',
+          tabBarIconStyle: { display: 'flex' },
+          tabBarLabelPosition: 'below-icon',
+          tabBarIcon: ({ color, size }) => (
+            <Icon name="ellipsis-horizontal-outline" color="#887700" />
+          ),
         }}
       />
     </BottomTab.Navigator>

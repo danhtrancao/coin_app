@@ -12,6 +12,8 @@ target 'CoinApp' do
     :hermes_enabled => true
   )
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'CoinAppTests' do
     inherit! :complete
     # Pods for testing
