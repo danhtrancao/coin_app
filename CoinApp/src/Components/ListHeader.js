@@ -7,7 +7,7 @@ const ListHeader = () => {
   const { t } = useTranslation()
   const { List, Layout } = useTheme()
   return (
-    <View style={Layout.backgroundHeader}>
+    <View style={List.backgroundHeader}>
       <View style={Layout.row}>
         <View style={Layout.noFlex}>
           <Text style={List.textStyle}>{t('market.no')}</Text>

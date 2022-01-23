@@ -54,6 +54,7 @@ const MoreContainer = () => {
       colors={['#1d1e22', '#1e2829', '#213333']}
       style={Layout.fill}
     >
+      <Text style={Layout.headerTitle}>{t('more.title')}</Text>
       <View style={Layout.groupDetail}>
         <View style={Layout.groupInfo}>
           <Text style={Layout.titleDetail}>{t('more.darkMode')}</Text>
