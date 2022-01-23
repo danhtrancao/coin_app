@@ -21,7 +21,7 @@ const MainNavigator = () => {
           tabBarIconStyle: { display: 'flex' },
           tabBarLabelPosition: 'below-icon',
           tabBarIcon: ({ color, size }) => (
-            <Icon name="bar-chart-outline" color="#887700" />
+            <Icon name="bar-chart-outline" size={20} color="#93CC4F" />
           ),
         }}
       />
@@ -32,7 +32,7 @@ const MainNavigator = () => {
           tabBarIconStyle: { display: 'flex' },
           tabBarLabelPosition: 'below-icon',
           tabBarIcon: ({ color, size }) => (
-            <Icon name="star-outline" color="#887700" />
+            <Icon name="star-outline" size={20} color="#93CC4F" />
           ),
         }}
       />
@@ -43,7 +43,7 @@ const MainNavigator = () => {
           tabBarIconStyle: { display: 'flex' },
           tabBarLabelPosition: 'below-icon',
           tabBarIcon: ({ color, size }) => (
-            <Icon name="search-outline" color="#887700" />
+            <Icon name="search-outline" size={20} color="#93CC4F" />
           ),
         }}
       />
@@ -54,7 +54,7 @@ const MainNavigator = () => {
           tabBarIconStyle: { display: 'flex' },
           tabBarLabelPosition: 'below-icon',
           tabBarIcon: ({ color, size }) => (
-            <Icon name="ellipsis-horizontal-outline" color="#887700" />
+            <Icon name="ellipsis-horizontal-outline" size={20} color="#93CC4F" />
           ),
         }}
       />
