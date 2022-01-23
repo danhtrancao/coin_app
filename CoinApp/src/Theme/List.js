@@ -41,5 +41,24 @@ export default function List() {
       width: 20,
       height: 20,
     },
+    mediumLogo: {
+      width: 30,
+      height: 30,
+    },
+    itemText: {
+      padding: 10,
+      color: 'white',
+    },
+    emptyListStyle: {
+      padding: 10,
+      fontSize: 18,
+      textAlign: 'center',
+      color: 'white',
+    },
+    separator: {
+      height: 0.5,
+      width: '100%',
+      backgroundColor: '#C8C8C8',
+    },
   })
 }

@@ -103,6 +103,9 @@ export default function () {
     marketCapFlex: {
       flex: 3.5,
     },
+    fiveFlex: {
+      flex: 5,
+    },
     fullSize: {
       height: '100%',
       width: '100%',
@@ -122,6 +125,93 @@ export default function () {
     },
     rotate90Inverse: {
       transform: [{ rotate: '-90deg' }],
+    },
+    container: {
+      flex: 1,
+      backgroundColor: 'green',
+    },
+    groupDetail: {
+      backgroundColor: '#233131',
+      borderRadius: 10,
+      margin: 15,
+      padding: 10,
+    },
+    input: {
+      fontSize: 14,
+      color: 'white',
+    },
+    headerTitle: {
+      fontSize: 16,
+      color: 'white',
+      paddingLeft: 10,
+    },
+    header: {
+      backgroundColor: '#1d1e22',
+      height: 50,
+      width: '100%',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+    },
+    nameTitle: {
+      color: 'white',
+      fontWeight: '600',
+      fontSize: 17,
+      paddingStart: 10,
+    },
+    codeNameTitle: {
+      color: 'grey',
+      fontWeight: '600',
+      fontSize: 17,
+      paddingStart: 3,
+    },
+    groupText: {
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
+    logo: {
+      height: 20,
+      width: 20,
+      marginStart: 10,
+    },
+    price_change_percentage_high: {
+      color: 'green',
+      fontSize: 15,
+      marginStart: 2,
+    },
+    price_change_percentage_low: {
+      color: 'red',
+      fontSize: 15,
+      marginStart: 2,
+    },
+    groupPrice: {
+      flexDirection: 'row',
+      marginStart: 15,
+      alignItems: 'center',
+    },
+    current_price_title: {
+      color: 'white',
+      fontSize: 20,
+      fontWeight: '800',
+    },
+    groupInfo: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      borderBottomWidth: 0.5,
+      borderBottomColor: 'grey',
+      paddingVertical: 5,
+    },
+    titleDetail: {
+      color: 'grey',
+      fontSize: 12,
+      fontWeight: '500',
+      paddingVertical: 10,
+    },
+    bodyDetail: {
+      color: 'white',
+      fontWeight: '600',
+      fontSize: 14,
     },
   })
 }
