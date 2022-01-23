@@ -30,6 +30,16 @@ export default function ({ Colors, ...args }) {
         marginTop: 10,
         marginBottom: 10,
       },
+      titleViewStyle: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignContent: 'center',
+      },
+      titleTextViewStyle: {
+        flex: 8,
+        fontSize: 25,
+        textAlign: 'center',
+      },
     }),
   }
 }

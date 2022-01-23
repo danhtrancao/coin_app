@@ -85,6 +85,24 @@ export default function () {
     fill: {
       flex: 1,
     },
+    noFlex: {
+      flex: 0.5,
+    },
+    coinFlex: {
+      flex: 1.5,
+    },
+    priceFlex: {
+      flex: 2.5,
+    },
+    durationFlex: {
+      flex: 1.5,
+    },
+    twoFlex: {
+      flex: 2,
+    },
+    marketCapFlex: {
+      flex: 3.5,
+    },
     fullSize: {
       height: '100%',
       width: '100%',
