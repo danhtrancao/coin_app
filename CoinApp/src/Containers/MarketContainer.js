@@ -10,7 +10,7 @@ import {
 } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 import { getMarketList } from '@/Services/api'
-import { EmptyListMessage, ItemSeparator, ListHeader } from '@/Components'
+import { EmptyList, ItemSeparator, ListHeader } from '@/Components'
 import {
   convertStringToCurrency,
   convertStringToCurrencyDecimal,
@@ -73,7 +73,7 @@ const MarketContainer = ({ navigation }) => {
   const ItemDetailView = ({ item }) => {
     return (
       <View>
-        <TouchableOpacity onPress={() => navigateToCoinDetail(item)}>
+        <TouchableOpacity onPress={() => navigateCoinDetail(item)}>
           <View style={List.itemDetailViewStyle}>
             <View style={Layout.noFlex}>
               <Text style={List.itemNoStyle}>{item.market_cap_rank}</Text>
@@ -116,9 +116,11 @@ const MarketContainer = ({ navigation }) => {
     )
   }
 
-  const navigateToCoinDetail = item => {
+  const navigateCoinDetail = item => {
     navigation.navigate('CoinDetail', {
       id: item.id,
+      image: item.image,
+      symbol: item.symbol,
     })
   }
 
@@ -147,7 +149,7 @@ const MarketContainer = ({ navigation }) => {
           ItemSeparatorComponent={ItemSeparator}
           ListHeaderComponent={ListHeader}
           renderItem={ItemDetailView}
-          ListEmptyComponent={EmptyListMessage}
+          ListEmptyComponent={EmptyList}
           onRefresh={onRefresh}
           refreshing={isRefreshing}
           contentContainerStyle={{ paddingBottom: 50 }}

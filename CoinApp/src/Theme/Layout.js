@@ -103,6 +103,9 @@ export default function () {
     marketCapFlex: {
       flex: 3.5,
     },
+    fiveFlex: {
+      flex: 5,
+    },
     fullSize: {
       height: '100%',
       width: '100%',
@@ -122,6 +125,25 @@ export default function () {
     },
     rotate90Inverse: {
       transform: [{ rotate: '-90deg' }],
+    },
+    container: {
+      flex: 1,
+      backgroundColor: 'green',
+    },
+    groupDetail: {
+      backgroundColor: '#233131',
+      borderRadius: 10,
+      margin: 15,
+      padding: 10,
+    },
+    input: {
+      fontSize: 14,
+      color: 'white',
+    },
+    headerTitle: {
+      fontSize: 16,
+      color: 'white',
+      paddingLeft: 10,
     },
   })
 }

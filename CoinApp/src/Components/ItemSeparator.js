@@ -1,17 +1,10 @@
 import React from 'react'
 import { View } from 'react-native'
+import { useTheme } from '@/Hooks'
 
 const ItemSeparator = () => {
-  return (
-    // Flat List Item Separator
-    <View
-      style={{
-        height: 0.5,
-        width: '100%',
-        backgroundColor: '#C8C8C8',
-      }}
-    />
-  )
+  const { List } = useTheme()
+  return <View style={List.separator} />
 }
 
 export default ItemSeparator
