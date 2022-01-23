@@ -38,6 +38,7 @@ export default function ({ Colors, ...args }) {
       titleTextViewStyle: {
         flex: 8,
         fontSize: 25,
+        color: 'white',
         textAlign: 'center',
       },
       container: {
@@ -58,6 +59,18 @@ export default function ({ Colors, ...args }) {
         fontSize: 16,
         color: 'white',
         paddingLeft: 10,
+      },
+      paddingBottom: {
+        paddingBottom: 50,
+      },
+      paddingStart: {
+        paddingStart: 15,
+      },
+      paddingEnd: {
+        paddingEnd: 15,
+      },
+      borderBottomWidth: {
+        borderBottomWidth: 0,
       },
     }),
   }
