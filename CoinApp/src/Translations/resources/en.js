@@ -10,7 +10,15 @@ export default {
     duration: '24H',
     marketCap: 'MARKET CAP',
   },
-  coinDetail: {},
+  coinDetail: {
+    marketCapRank: 'Market Cap Rank',
+    marketCap: 'Market Cap',
+    fullyDilutedValuation: 'Fully Diluted Valuation',
+    high: '24H High',
+    low: '24H Low',
+    totalSupply: 'Total Supply',
+    maxSupply: 'Max Supply',
+  },
   search: {
     placeHolder: 'Search for a coin...',
     treding: 'Trending Search',
@@ -23,5 +31,10 @@ export default {
     auto: 'Auto',
     dark: 'Dark',
     light: 'Light',
+  },
+  currency: {
+    billion: 'Billion',
+    milion: 'Milion',
+    thousand: 'Thousand',
   },
 }

@@ -145,5 +145,73 @@ export default function () {
       color: 'white',
       paddingLeft: 10,
     },
+    header: {
+      backgroundColor: '#1d1e22',
+      height: 50,
+      width: '100%',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+    },
+    nameTitle: {
+      color: 'white',
+      fontWeight: '600',
+      fontSize: 17,
+      paddingStart: 10,
+    },
+    codeNameTitle: {
+      color: 'grey',
+      fontWeight: '600',
+      fontSize: 17,
+      paddingStart: 3,
+    },
+    groupText: {
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
+    logo: {
+      height: 20,
+      width: 20,
+      marginStart: 10,
+    },
+    price_change_percentage_high: {
+      color: 'green',
+      fontSize: 15,
+      marginStart: 2,
+    },
+    price_change_percentage_low: {
+      color: 'red',
+      fontSize: 15,
+      marginStart: 2,
+    },
+    groupPrice: {
+      flexDirection: 'row',
+      marginStart: 15,
+      alignItems: 'center',
+    },
+    current_price_title: {
+      color: 'white',
+      fontSize: 20,
+      fontWeight: '800',
+    },
+    groupInfo: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      borderBottomWidth: 0.5,
+      borderBottomColor: 'grey',
+      paddingVertical: 5,
+    },
+    titleDetail: {
+      color: 'grey',
+      fontSize: 12,
+      fontWeight: '500',
+      paddingVertical: 10,
+    },
+    bodyDetail: {
+      color: 'white',
+      fontWeight: '600',
+      fontSize: 14,
+    },
   })
 }
