@@ -9,7 +9,7 @@ import {
   SafeAreaView,
 } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
-import { getMarketList } from '@/Services/modules/api'
+import { getMarketList } from '@/Services/api'
 import { EmptyListMessage, ItemSeparator, ListHeader } from '@/Components'
 import {
   convertStringToCurrency,
@@ -95,15 +95,15 @@ const MarketContainer = ({ navigation }) => {
               </Text>
             </View>
             <View style={Layout.durationFlex}>
-              {item.price_change_percentage_24h.toFixed(2) >= 0 ? (
-                <Text style={List.itemIncreaseStyle}>
-                  {item.price_change_percentage_24h.toFixed(2)}%
-                </Text>
-              ) : (
-                <Text style={List.itemDecreaseStyle}>
-                  {item.price_change_percentage_24h.toFixed(2)}%
-                </Text>
-              )}
+              <Text
+                style={
+                  item.price_change_percentage_24h.toFixed(2) >= 0
+                    ? List.itemIncreaseStyle
+                    : List.itemDecreaseStyle
+                }
+              >
+                {item.price_change_percentage_24h.toFixed(2)}%
+              </Text>
             </View>
             <View style={Layout.marketCapFlex}>
               <Text style={List.itemStyle}>
