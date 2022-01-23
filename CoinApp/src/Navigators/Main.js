@@ -13,7 +13,11 @@ const BottomTab = createBottomTabNavigator()
 // @refresh reset
 const MainNavigator = () => {
   return (
-    <BottomTab.Navigator screenOptions={{ headerShown: false }}>
+    <BottomTab.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
       <BottomTab.Screen
         name="Market"
         component={MarketContainer}
@@ -54,7 +58,11 @@ const MainNavigator = () => {
           tabBarIconStyle: { display: 'flex' },
           tabBarLabelPosition: 'below-icon',
           tabBarIcon: ({ color, size }) => (
-            <Icon name="ellipsis-horizontal-outline" size={20} color="#93CC4F" />
+            <Icon
+              name="ellipsis-horizontal-outline"
+              size={20}
+              color="#93CC4F"
+            />
           ),
         }}
       />

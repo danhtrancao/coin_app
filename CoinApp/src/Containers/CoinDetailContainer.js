@@ -26,7 +26,7 @@ const CoinDetailContainer = ({ route, navigation }) => {
   const [isAdding, setIsAdding] = useState(false)
   const [isLoading, setLoading] = useState(false)
   const { id, image, symbol } = route.params
-  const { List, Layout } = useTheme()
+  const { List, Layout, Common } = useTheme()
 
   const onAddWatchlist = async () => {
     setIsAdding(true)
@@ -97,28 +97,43 @@ const CoinDetailContainer = ({ route, navigation }) => {
   }
 
   const current_price =
-    convertStringToCurrencyDecimal(itemCoin?.market_data?.current_price?.usd) ??
-    0
+    itemCoin?.market_data?.current_price?.usd === undefined
+      ? ''
+      : convertStringToCurrencyDecimal(
+          itemCoin?.market_data?.current_price?.usd,
+        )
   const price_change_percentage_24h =
-    itemCoin?.market_data?.price_change_percentage_24h.toFixed(2) ?? 0
-  const market_cap_rank = itemCoin.market_cap_rank ?? 0
+    itemCoin?.market_data?.price_change_percentage_24h === undefined
+      ? ''
+      : itemCoin?.market_data?.price_change_percentage_24h.toFixed(2)
+  const market_cap_rank =
+    itemCoin.market_cap_rank === undefined ? '' : itemCoin.market_cap_rank
   const market_cap =
-    convertStringToCurrencyDecimal(itemCoin.market_data?.market_cap?.usd) ?? 0
-  const fully_diluted_valuation = convertStringToCurrencyDecimal(
-    itemCoin?.market_data?.fully_diluted_valuation?.usd || 0,
-  )
-  const high_24h = convertStringToCurrencyDecimal(
-    itemCoin.market_data?.high_24h?.usd || 0,
-  )
-  const low_24h = convertStringToCurrencyDecimal(
-    itemCoin.market_data?.low_24h?.usd || 0,
-  )
-  const total_supply = convertStringToCurrencyString(
-    itemCoin.market_data?.total_supply || 0,
-  )
-  const max_supply = convertStringToCurrencyString(
-    itemCoin.market_data?.max_supply || 0,
-  )
+    itemCoin.market_data?.market_cap?.usd === undefined
+      ? ''
+      : convertStringToCurrencyDecimal(itemCoin.market_data?.market_cap?.usd)
+  const fully_diluted_valuation =
+    itemCoin?.market_data?.fully_diluted_valuation?.usd === undefined
+      ? ''
+      : convertStringToCurrencyDecimal(
+          itemCoin?.market_data?.fully_diluted_valuation?.usd || 0,
+        )
+  const high_24h =
+    itemCoin.market_data?.high_24h?.usd === undefined
+      ? ''
+      : convertStringToCurrencyDecimal(itemCoin.market_data?.high_24h?.usd || 0)
+  const low_24h =
+    itemCoin.market_data?.low_24h?.usd === undefined
+      ? ''
+      : convertStringToCurrencyDecimal(itemCoin.market_data?.low_24h?.usd || 0)
+  const total_supply =
+    itemCoin.market_data?.total_supply === undefined
+      ? ''
+      : convertStringToCurrencyString(itemCoin.market_data?.total_supply || 0)
+  const max_supply =
+    itemCoin.market_data?.max_supply === undefined
+      ? ''
+      : convertStringToCurrencyString(itemCoin.market_data?.max_supply || 0)
 
   return (
     <View style={Layout.container}>
@@ -142,7 +157,7 @@ const CoinDetailContainer = ({ route, navigation }) => {
                     name="arrow-back-outline"
                     size={30}
                     color="white"
-                    style={{ paddingStart: 15 }}
+                    style={Common.paddingStart}
                   />
                 </View>
               </TouchableOpacity>
@@ -165,7 +180,7 @@ const CoinDetailContainer = ({ route, navigation }) => {
                 name="star"
                 size={20}
                 color={isAdding ? 'yellow' : 'white'}
-                style={{ paddingEnd: 15 }}
+                style={Common.paddingEnd}
               />
             </TouchableOpacity>
           </View>
@@ -227,7 +242,7 @@ const CoinDetailContainer = ({ route, navigation }) => {
                 <Text style={Layout.bodyDetail}>{total_supply}</Text>
               </View>
 
-              <View style={[Layout.groupInfo, { borderBottomWidth: 0 }]}>
+              <View style={[Layout.groupInfo, Common.borderBottomWidth]}>
                 <Text style={Layout.titleDetail}>
                   {t('coinDetail.maxSupply')}
                 </Text>

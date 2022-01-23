@@ -60,6 +60,18 @@ export default function ({ Colors, ...args }) {
         color: 'white',
         paddingLeft: 10,
       },
+      paddingBottom: {
+        paddingBottom: 50,
+      },
+      paddingStart: {
+        paddingStart: 15,
+      },
+      paddingEnd: {
+        paddingEnd: 15,
+      },
+      borderBottomWidth: {
+        borderBottomWidth: 0,
+      },
     }),
   }
 }

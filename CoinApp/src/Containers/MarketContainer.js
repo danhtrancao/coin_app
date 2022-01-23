@@ -22,7 +22,7 @@ const MarketContainer = ({ navigation }) => {
   const [marketCoins, setMarketCoinList] = useState([])
   const [isLoading, setLoading] = useState(false)
   const [isRefreshing, setRefresing] = useState(false)
-  const { List, Layout, Common } = useTheme()
+  const { List, Layout, Common, Gutters } = useTheme()
 
   useEffect(() => {
     let isMounted = true
@@ -144,7 +144,7 @@ const MarketContainer = ({ navigation }) => {
           </TouchableOpacity>
         </View>
         {isLoading ? (
-          <ActivityIndicator />
+          <ActivityIndicator style={[Gutters.largeVMargin]} />
         ) : (
           <FlatList
             data={marketCoins}
@@ -156,7 +156,7 @@ const MarketContainer = ({ navigation }) => {
             ListEmptyComponent={EmptyList}
             onRefresh={onRefresh}
             refreshing={isRefreshing}
-            contentContainerStyle={{ paddingBottom: 50 }}
+            contentContainerStyle={Common.paddingBottom}
           />
         )}
       </LinearGradient>

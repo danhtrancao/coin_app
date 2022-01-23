@@ -112,7 +112,7 @@ const WatchlistContainer = ({ navigation }) => {
           ListHeaderComponent={ListHeader}
           renderItem={ItemDetailView}
           ListEmptyComponent={EmptyList}
-          contentContainerStyle={{ paddingBottom: 50 }}
+          contentContainerStyle={Common.paddingBottom}
         />
       </LinearGradient>
     </View>
